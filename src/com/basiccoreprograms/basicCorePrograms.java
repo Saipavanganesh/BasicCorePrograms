@@ -6,8 +6,8 @@ import java.lang.Math;
 
 public class basicCorePrograms {
     public static void main(String[] args) {
-        System.out.println("Quotient and Remainder");
-        System.out.println("**********************");
+        System.out.println("Swapping");
+        System.out.println("********");
         System.out.println(" ");
 
         Scanner sc = new Scanner(System.in);
