@@ -2,44 +2,27 @@ package com.basiccoreprograms;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class basicCorePrograms {
     public static void main(String[] args) {
-        System.out.println("Leap Year");
-        System.out.println("*********");
+        System.out.println("Power of 2");
+        System.out.println("**********");
         System.out.println(" ");
 
         Scanner sc=new Scanner(System.in);
-        System.out.println("Enter an year");
-        int year=sc.nextInt();
+        System.out.println("Enter an number");
+        int num=sc.nextInt();
 
-        int count=0,rem,temp;
-        temp=year;
-        while(temp!=0){
-            rem=temp%10;
-            temp=temp/10;
-            count++;
-        }
-        if(count!=4){
-            System.out.println("Enter correct year");
-        } else if (year>1582) {
-            if (year%4==0) {
-                if(year%100==0){
-                    if(year%400==0){
-                        System.out.println("Entered year is a leap year");
-                    }
-                    else{
-                        System.out.println("Entered year is not a leap year");
-                    }
-                }
-                else{
-                    System.out.println("Entered year is leap year");
-                }
-            } else {
-                System.out.println("Entered year is not leap year");
+        if(num<31){
+            System.out.println("Powers of 2 upto "+num);
+            for(int i=0;i<=num;i++){
+                System.out.println(Math.pow(2,i));
             }
         }
-        System.out.println("Enter correct year");
+        else{
+            System.out.println("Enter a number less than 31");
+        }
     }
 }
 
