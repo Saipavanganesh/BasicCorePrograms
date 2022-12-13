@@ -5,34 +5,41 @@ import java.util.Scanner;
 
 public class basicCorePrograms {
     public static void main(String[] args) {
-        System.out.println("Percentage of Heads and Tails");
-        System.out.println("*****************************");
+        System.out.println("Leap Year");
+        System.out.println("*********");
         System.out.println(" ");
+
         Scanner sc=new Scanner(System.in);
+        System.out.println("Enter an year");
+        int year=sc.nextInt();
 
-        System.out.println("Enter how many time you want to flip the coin...");
-        int flip=sc.nextInt();
-        Random ran=new Random();
-        int count=0;
-        double percentage;
-
-        for(int i=0;i<flip;i++){
-            double toss=ran.nextDouble();
-            System.out.println(toss);
-            if(toss<0.5){
-                System.out.println("Tails");
-                count++;
-            }
-            else{
-                System.out.println("Heads");
+        int count=0,rem,temp;
+        temp=year;
+        while(temp!=0){
+            rem=temp%10;
+            temp=temp/10;
+            count++;
+        }
+        if(count!=4){
+            System.out.println("Enter correct year");
+        } else if (year>1582) {
+            if (year%4==0) {
+                if(year%100==0){
+                    if(year%400==0){
+                        System.out.println("Entered year is a leap year");
+                    }
+                    else{
+                        System.out.println("Entered year is not a leap year");
+                    }
+                }
+                else{
+                    System.out.println("Entered year is leap year");
+                }
+            } else {
+                System.out.println("Entered year is not leap year");
             }
         }
-        double Count=count;
-        double Flip=flip;
-
-        percentage=(Count/Flip)*100;
-        System.out.println("Heads Percentage="+(100.0-percentage));
-        System.out.println("Tails Percentage="+percentage);
+        System.out.println("Enter correct year");
     }
 }
 
