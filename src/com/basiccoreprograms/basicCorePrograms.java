@@ -8,19 +8,25 @@ import java.util.ArrayList;
 
 public class basicCorePrograms {
     public static void main(String[] args) {
-        System.out.println("Largest of 3 numbers");
-        System.out.println("********************");
+        System.out.println("Sum of Harmonic Numbers");
+        System.out.println("***********************");
         System.out.println(" ");
 
         Scanner sc = new Scanner(System.in);
-        int[] numArr=new int[3];
-        for(int i=0;i<3;i++){
-            System.out.println("Enter number");
-            int num= sc.nextInt();
-            numArr[i]=num;
+        System.out.println("Enter a number");
+        int num=sc.nextInt();
+        double sum=0;
+        if(num!=0){
+            for(int i=1;i<=num;i++){
+                System.out.print("(1/"+i+") + ");
+                sum=sum+((double)1/i);
+            }
         }
-        Arrays.sort(numArr);
-        System.out.println("Largest number is: "+numArr[2]);
+        else{
+            System.out.println("Enter another number");
+        }
+        System.out.println("");
+        System.out.println("Sum is "+sum);
     }
 }
 
