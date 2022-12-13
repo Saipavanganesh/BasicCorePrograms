@@ -6,20 +6,31 @@ import java.lang.Math;
 
 public class basicCorePrograms {
     public static void main(String[] args) {
-        System.out.println("Even or Odd");
-        System.out.println("***********");
+        System.out.println("Vowel or Consonant");
+        System.out.println("******************");
         System.out.println(" ");
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int num = sc.nextInt();
+        System.out.println("Enter an alphabet");
+        char ch = sc.next().charAt(0);
+        switch(ch){
+            case 'a':
+            case 'A':
+            case 'e':
+            case 'E':
+            case 'i':
+            case 'I':
+            case 'o':
+            case 'O':
+            case 'u':
+            case 'U':
+                System.out.println("Vowel");
+                break;
+            default :
+                System.out.println("Consonant");
+                break;
+        }
 
-        if(num%2==0){
-            System.out.println("Even Number");
-        }
-        else{
-            System.out.println("Odd Number");
-        }
     }
 }
 
