@@ -11,11 +11,19 @@ public class basicCorePrograms {
         System.out.println(" ");
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter an number");
-        int num = sc.nextInt();
+        System.out.println("Enter First number");
+        int num1 = sc.nextInt();
+        System.out.println("Enter Second number");
+        int num2 = sc.nextInt();
+        int temp;
 
-        System.out.println("Quotient of "+num+" and 2 is: "+(num/2));
-        System.out.println("Remainder of "+num+" and 2 is: "+(num%2));
+        System.out.println("Numbers before swapping: "+num1+" "+num2);
+
+        temp=num1;
+        num1=num2;
+        num2=temp;
+
+        System.out.println("Numbers before swapping: "+num1+" "+num2);
     }
 }
 
